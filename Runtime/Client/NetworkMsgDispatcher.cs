@@ -1,4 +1,4 @@
-﻿﻿﻿namespace Com.Eyu.UnitySocketLibrary
+﻿﻿namespace Com.Eyu.UnitySocketLibrary
 {
 	public class NetworkMsgDispatcher : IMessageDispatcher
 	{
