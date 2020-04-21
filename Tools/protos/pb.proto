@@ -1,0 +1,39 @@
+syntax = "proto3";
+package UnitySocketLibrary;
+
+option csharp_namespace = "Com.Eyu.UnitySocketLibrary";
+
+//协议包格式:包头(4字节，内容表示包体大小) + 包体
+
+enum Command {
+    KNULL = 0;
+    KLogin = 1;
+    KLeave = 2;
+    KMatch = 3;
+    KPrepare = 4;
+    KStart = 5;
+}
+
+message LoginReq {
+    int32 id = 1;
+    string name = 2;
+    repeated string nicks = 3;
+}
+
+message LoginResp {
+    string account = 1;
+}
+
+message C2S {
+    Command cmd = 1;
+    int32 reqId = 2;
+    LoginReq login = 3;
+}
+
+message S2C {
+    Command cmd = 1;
+    int32 reqId = 2;
+    int32 code = 3;     // 返回码,0成功，非0失败
+
+    LoginResp login = 4;
+}
