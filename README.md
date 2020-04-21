@@ -2,9 +2,9 @@
 A server/client side Socket/WebSocket library integrated with [google protobuf](https://github.com/protocolbuffers/protobuf/tree/master/csharp)(v3.11.4) for unity3d project.
 
 ## Features:
-- 1.The same codes and same workflow for server/client side use.
-- 2.Extensible socket data packer/unpacker. Built-in Google protobuf packer, but easy to implement json/string packer.
-- 3.Socket packet handler based on messaging system.
+- 1.The same codes and same workflows for server/client side use.
+- 2.Extensible socket data packer/unpacker. Built-in with Google protobuf packer, but can easily to implement json/string packer.
+- 3.Packet handler based on messaging system.
 - 4.Multiple sessions/channels.
 
 ## How to use:
